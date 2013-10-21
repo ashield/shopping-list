@@ -3,6 +3,10 @@
 		<link rel="stylesheet" href="reset.css">
 		<link rel="stylesheet" href="style.css">
 
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+
 	</head>
 
 <body>
@@ -14,15 +18,12 @@
 
 			<h1>What do I need?</h1>
 
-			<input type="text" id="list-item" name="list-item">
+			<input type="text" id="item" name="item">
+			<div id="add" class="icon"><img src="add.svg" alt=""></div>
+			<div id="subtract" class="icon"><img src="subtract.svg" alt=""></div>
 
-			<ul>
-				<li class="active">
-					<input class="checkbox" name="checkbox" type="checkbox">
-					Milk and Cookies</li>
-				<li class="checked-off">
-					<input class="checkbox" name="checkbox" type="checkbox">
-					Lift plus <img class="delete" src="noun_project_5493.svg" alt=""></li>
+			<ul id="shopping-list" class="shopping-list">
+
 			</ul>
 
 
