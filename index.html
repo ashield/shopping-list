@@ -4,30 +4,22 @@
 		<title>Shopping List</title>
 		<link rel="stylesheet" href="reset.css">
 		<link rel="stylesheet" href="style.css">
-
-	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-	<script type="text/javascript" src="app.js"></script>
-
 	</head>
-
 <body>
-
-<div id="background"></div>
-
-
+	<div id="background"></div>
 		<div class="list">
-
 			<h1>Shopping List</h1><img class="basket" src="basket.svg" alt="">
-
 			<input type="text" id="item" name="item" maxlength="30">
 			<div id="add" class="icon"><img src="add.svg" alt=""></div>
 			<div id="subtract" class="icon"><img src="subtract.svg" alt=""></div>
-
-			<ul id="shopping-list" class="shopping-list">
-
-			</ul>
-
+		<div class='instructions'>
+			<p> add items, remove items, drag and drop to reorder.</p>
 		</div>
+			<ul id="shopping-list" class="shopping-list">
+			</ul>
+		</div>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script type="text/javascript" src="app.js"></script>
 </body>
 </html>
