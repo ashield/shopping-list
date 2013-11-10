@@ -159,6 +159,9 @@ input:focus {
 }
 
 @media (max-width: 450px) {
+	.list {
+		top: 0;
+	}
 	.basket {
 		display: none;
 	}
