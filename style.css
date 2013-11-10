@@ -1,5 +1,5 @@
 body {
-	font-family: Avenir;
+	font-family: 'avenirbook';
 }
 
 #background {
@@ -36,17 +36,20 @@ body {
 }
 
 #item{
-	height: 30px;
 	width: 380px;
 	font-size: 24px;
 	text-align: left;
-	margin: 5px 0 5px 76px;
+	margin: 8px 0 5px 76px;
+	border: solid 1px black;
+}
+
+input:focus {
+	outline: none;
 }
 
 .list ul {
 	text-align: left;
 	padding: 10px 0 10px 57px;
-
 }
 
 .list li {
@@ -75,7 +78,7 @@ body {
 }
 
 .instructions {
-padding: 10px 35px 0 84px;
+	padding: 10px 35px 0 84px;
 }
 
 /* Validation animation */
@@ -108,3 +111,71 @@ padding: 10px 35px 0 84px;
     -o-animation-name: shake;
     animation-name: shake;
 }
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .basket {
+  	left: 65px;
+  }
+
+  .list h1 {
+	font-size: 40px;
+	padding: 40px 0 0 150px;
+  }
+
+  .list {
+  	width: 95%;
+  }
+
+  #item {
+  	width: 70%;
+  	margin: 8px 4px 5px 29px;
+  }
+
+  #add {
+  	padding: 0 2px 0 0px;
+  }
+
+  .list ul {
+  	padding: 10px 0 10px 26px;
+  }
+
+  .list li {
+  	font-size: 20px;
+  }
+
+  .instructions {
+  	padding: 10px 35px 0 30px;
+  }
+}
+
+@media (max-width: 535px) {
+	.basket {
+		left: 20px;
+	}
+	.list h1 {
+		padding: 40px 0 0 100px;
+	}
+}
+
+@media (max-width: 450px) {
+	.basket {
+		display: none;
+	}
+	.list h1 {
+		padding: 40px 0 0 10%;
+	}
+}
+
+/* Font  */
+@font-face {
+    font-family: 'avenirbook';
+    src: url('font/avenir-webfont.eot');
+    src: url('font/avenir-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/avenir-webfont.woff') format('woff'),
+         url('font/avenir-webfont.ttf') format('truetype'),
+         url('font/avenir-webfont.svg#avenirbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}	
+

@@ -11,15 +11,17 @@ $("#shopping-list").sortable();
 
 }); // End of document ready
 
-var item = {}
+var item = {};
 var onList = [];
 
 // Submitting user input
 function submit(){
-  var list = document.getElementById("item").value;
-  validation (list)
+  var list = $.trim(document.getElementById("item").value);
+  validation (list);
 // Reset input after submit   
-    $("#item").val('');
+  $("#item").val('');
+  strikeThrough();
+};
 
 // Validating user input  
 function validation (list){
@@ -28,26 +30,21 @@ function validation (list){
     shake();
     return;
   }
-  else addItem();
+ else addItem(list);
 }
  
 // Adding items to the array
-  function addItem() {
-    onList.push(list);{
+  function addItem(list) {
+    onList.push(list)
     var lastNum = onList.length;
     var finalNum = (lastNum - 1);
     onList[finalNum];
     var newListItem = "<li>" + "<input class='checkbox' type='checkbox'>" + "<span>"  + onList[finalNum] + "</span>" + "</li>";
     $(newListItem).appendTo(".shopping-list").hide().slideDown("fast");
-    };
-    removeInstructions()
-  };
-
-strikeThrough();
-
-}; // End of submit function
-
-removeItem();
+    
+  removeInstructions();
+  };  
+  removeItem();
 
 // Validation animation
 function shake(){
@@ -60,7 +57,7 @@ function shake(){
 // Remove initial instructions 
 function removeInstructions() {
  if (onList.length > 0) {
-  $('.instructions').remove()
+  $('.instructions').remove();
   };
 }
 
@@ -81,7 +78,7 @@ $("#subtract").click(function(){
 $(".shopping-list input:checked").each(function() {
     var index = $.trim($(".shopping-list input:checkbox").index(this));
     onList.splice(index);
-    $(".shopping-list li:eq(" + index + ")").slideUp("fast")
+    $(".shopping-list li:eq(" + index + ")").slideUp("fast");
   });
 });
 }
