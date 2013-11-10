@@ -150,6 +150,10 @@ input:focus {
 }
 
 @media (max-width: 535px) {
+	.list {
+		top: 10px;
+	}
+
 	.basket {
 		left: 20px;
 	}
@@ -159,15 +163,23 @@ input:focus {
 }
 
 @media (max-width: 450px) {
-	.list {
-		top: 0;
+	#item {
+		width:65%;
+		margin: 8px 4px 5px 10px;
 	}
 	.basket {
 		display: none;
 	}
 	.list h1 {
-		padding: 40px 0 0 10%;
+		padding: 40px 0 0 5%;
 	}
+	.instructions {
+		padding: 10px 35px 0 13px;
+
+	}
+	 .list ul {
+  	padding: 10px 0 10px 6px;
+  }
 }
 
 /* Font  */
